@@ -520,6 +520,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#calculator" title="Calculator" class="md-nav__link">
+    Calculator
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -595,6 +602,30 @@
   <li class="md-nav__item">
     <a href="../TMC2208中文版/" title="TMC2208中文版" class="md-nav__link">
       TMC2208中文版
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../FAQ_of_TMC_Driver_Module/" title="FAQ of TMC Driver Module" class="md-nav__link">
+      FAQ of TMC Driver Module
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Comparison_of_TMC_Driver_Module/" title="Comparison of TMC Driver Module" class="md-nav__link">
+      Comparison of TMC Driver Module
     </a>
   </li>
 
@@ -1056,6 +1087,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#calculator" title="Calculator" class="md-nav__link">
+    Calculator
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1316,6 +1354,13 @@ Imax -&gt; Maximum current per phase (Imax = Irms * 1.41)  </p>
 ​    2.Do not connect the motor when measuring the voltage, otherwise it is easy to burn the driver.<br />
 ​    3.Power should be connected when measuring voltage, do not just connect USB power supply.<br />
 ​    4.<font color="red"><strong>Please pay special attention to directions!</strong></font>  </p>
+<h3 id="calculator">Calculator<a class="headerlink" href="#calculator" title="Permanent link">&para;</a></h3>
+<form name="data">
+RMS Current (A): <input type="text" name="i"  value="0.6" style="width:60px;" size="5">
+Reference Voltage (V): <input readonly type="text" name="v" value="" style="width:60px;" size="5">
+<input type="button" name="go" value="calculate" onclick="var i=document.forms['data'].i.value; i=i.replace(',','.'); var v=new Number(i); v=v*1.41; v=v.toFixed(2); document.forms['data'].v.value=v; return false;">
+</form>
+
 <h2 id="versions-difference">Versions Difference<a class="headerlink" href="#versions-difference" title="Permanent link">&para;</a></h2>
 <hr />
 <table>

@@ -545,6 +545,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#calculator" title="Calculator" class="md-nav__link">
+    Calculator
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#micro-stepping" title="Micro-stepping" class="md-nav__link">
     Micro-stepping
   </a>
@@ -629,6 +636,30 @@
   <li class="md-nav__item">
     <a href="../TMC2208中文版/" title="TMC2208中文版" class="md-nav__link">
       TMC2208中文版
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../FAQ_of_TMC_Driver_Module/" title="FAQ of TMC Driver Module" class="md-nav__link">
+      FAQ of TMC Driver Module
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Comparison_of_TMC_Driver_Module/" title="Comparison of TMC Driver Module" class="md-nav__link">
+      Comparison of TMC Driver Module
     </a>
   </li>
 
@@ -1091,6 +1122,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#calculator" title="Calculator" class="md-nav__link">
+    Calculator
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#micro-stepping" title="Micro-stepping" class="md-nav__link">
     Micro-stepping
   </a>
@@ -1371,19 +1409,26 @@
 <p>​    The TMC2208 outputs continuous motor current up to 1.4A and peak current up to 2A. Therefore, the reference voltage of the driver module should not exceed 1V. At the same time, the driver module must be dissipated, otherwise it will affect the life of the driver module.</p>
 <h3 id="motor-current-setting">Motor Current Setting<a class="headerlink" href="#motor-current-setting" title="Permanent link">&para;</a></h3>
 <p><img alt="TMC2208-current-setting" src="../images/TMC2208-current-setting.png" /></p>
-<p>The best way to set the motor current is by measuring the voltage on the Vref pin (0…2.5V) and adjusting the voltage with the potentiometer. The maximum settable motor current is 1.77A RMS (0.11Ohm sense resistors), but the SilentStepSticks can only be used up to 1.2A RMS.
-Irms = (Vref * 1.77A) / 2.5V = Vref * 0.71
-Vref = (Irms * 2.5V) / 1.77A = Irms * 1.41 = Imax
-Vref -&gt; Voltage on Vref pin
-Irms -&gt; RMS (Root Mean Square) current per phase (Irms = Imax / 1.41)
-Imax -&gt; Maximum current per phase (Imax = Irms * 1.41)</p>
+<p>The best way to set the motor current is by measuring the voltage on the Vref pin (0…2.5V) and adjusting the voltage with the potentiometer. The maximum settable motor current is 1.77A RMS (0.11Ohm sense resistors), but the SilentStepSticks can only be used up to 1.2A RMS.<br />
+Irms = (Vref * 1.77A) / 2.5V = Vref * 0.71<br />
+Vref = (Irms * 2.5V) / 1.77A = Irms * 1.41 = Imax <br />
+Vref -&gt; Voltage on Vref pin<br />
+Irms -&gt; RMS (Root Mean Square) current per phase (Irms = Imax / 1.41)<br />
+Imax -&gt; Maximum current per phase (Imax = Irms * 1.41)   </p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 </div>
-<p>​    1. Vref measures Gnd and the voltage at the middle of the potentiometer.
-​    2. Do not connect the motor when measuring the voltage, otherwise it is easy to burn the driver.
-​    3. Power should be connected when measuring voltage, do not just connect USB power supply.
+<p>​    1. Vref measures Gnd and the voltage at the middle of the potentiometer.<br />
+​    2. Do not connect the motor when measuring the voltage, otherwise it is easy to burn the driver.<br />
+​    3. Power should be connected when measuring voltage, do not just connect USB power supply.<br />
 ​    4. <font color="red"><strong>Please pay special attention to directions!</strong></font></p>
+<h3 id="calculator">Calculator<a class="headerlink" href="#calculator" title="Permanent link">&para;</a></h3>
+<form name="data">
+RMS Current (A): <input type="text" name="i"  value="0.6" style="width:60px;" size="5">
+Reference Voltage (V): <input readonly type="text" name="v" value="" style="width:60px;" size="5">
+<input type="button" name="go" value="calculate" onclick="var i=document.forms['data'].i.value; i=i.replace(',','.'); var v=new Number(i); v=v*1.41; v=v.toFixed(2); document.forms['data'].v.value=v; return false;">
+</form>
+
 <h3 id="micro-stepping">Micro-stepping<a class="headerlink" href="#micro-stepping" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
