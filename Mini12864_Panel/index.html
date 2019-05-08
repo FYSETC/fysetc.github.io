@@ -38,7 +38,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-\.]+">
       
       <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0, mkdocs-material-3.0.3">
+      <meta name="generator" content="mkdocs-1.0.3, mkdocs-material-3.0.4">
     
     
       
@@ -60,8 +60,8 @@
       <script src="../assets/javascripts/modernizr.1aa3b519.js"></script>
     
     
-      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
       
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
@@ -428,6 +428,13 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optional-hardware-module" title="Optional Hardware module:" class="md-nav__link">
+    Optional Hardware module:
+  </a>
   
 </li>
       
@@ -1160,6 +1167,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#optional-hardware-module" title="Optional Hardware module:" class="md-nav__link">
+    Optional Hardware module:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#attention" title="Attention" class="md-nav__link">
     Attention
   </a>
@@ -1243,16 +1257,18 @@
                 
                 <h2 id="product-introduction">Product Introduction<a class="headerlink" href="#product-introduction" title="Permanent link">&para;</a></h2>
 <p><img alt="Mini12864" src="../images/Mini12864.png" /></p>
-<p>这是一个便宜，带RGB指示灯，通用于marlin的显示屏，支持脱机打印，分辨率为12864，显示区域为2.4’‘，SD卡座可以为侧式或者立式，方便不同的安装场合，非常适用于小型3D打印机。</p>
 <p>This is a opensouce, cheap, with RGB indicator, common to marlin's display, supports offline printing, resolution is 12864, display area is 2.4'', SD card holder can be side or vertical, convenient for different installation occasions Ideal for small 3D printers.</p>
-<p>There are two versions, one with only two RGB LEDs around the encoder, the backlight is fixed color; the other one backlight is also RGB.</p>
+<p>There are three versions：</p>
+<p>V1.2 with  two RGB LEDs around the encoder, the back-light is fixed color.</p>
+<p>V2.0 with  two RGB LEDs around the encoder，the  back-light is  RGB  and controlled by 3 pwm pins.</p>
+<p>V2.1 with  two RGB LEDs around the encoder，the  back-light is  RGB  and controlled by 3 WS2811 chips, same as the NEOPIXEL_LED.</p>
 <h2 id="features">Features<a class="headerlink" href="#features" title="Permanent link">&para;</a></h2>
 <ul>
 <li>2.4" inch high contrast Graphic LCD</li>
 <li>Black-gray/black-green/white-black/white-blue/green-black, 5 display styles</li>
 <li>SPI communication to host micro-controller</li>
-<li>Support Vertical or side SD slot with card detect</li>
-<li>Rotary Encoder </li>
+<li>Support Vertical or side SD slot with card detect,with a optional  SD module</li>
+<li>Rotary Encoder with RGB-Aura</li>
 <li>Configurable RGB LED light</li>
 <li>Software configurable contrast setting</li>
 <li>3D printable case and mount STL file </li>
@@ -1265,14 +1281,14 @@
 <p><img alt="" src="../images/Mini12864-EXP1.svg" /></p>
 <p><img alt="" src="../images/Mini12864-EXP2.svg" /></p>
 <h2 id="firmware-config">Firmware config<a class="headerlink" href="#firmware-config" title="Permanent link">&para;</a></h2>
-<p>This screen driver is ST7567 and is compatible with the marlin Mini panel. It has been tested well, but the following configuration is required.</p>
+<p>This screen driver is ST7567 and is compatible with the marlin Mini panel (UC1701,same as ST7567). It has been tested well, and the following configuration is required.</p>
 <p><strong>Before you start, please install the latest version of U8glib.</strong></p>
 <h5 id="step1-changes-the-pins">Step1. changes the pins.<a class="headerlink" href="#step1-changes-the-pins" title="Permanent link">&para;</a></h5>
 <p>On a RAMPS-compatible board, you need to make the following changes in pins_RAMPS.h:</p>
 <div class="superfences-tabs">
 <input name="__tabs_1" type="radio" id="__tab_1_0" checked="checked" />
 <label for="__tab_1_0">pins_RAMPS.h</label>
-<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -1309,8 +1325,8 @@
 <p>On a our F6 board, you need to make the following changes in pins_FYSETC_F6_V13.h:</p>
 <div class="superfences-tabs">
 <input name="__tabs_2" type="radio" id="__tab_2_0" checked="checked" />
-<label for="__tab_2_0">pins_RAMPS.h</label>
-<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<label for="__tab_2_0">pins_FYSETC_F6_V13.h</label>
+<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -1363,24 +1379,133 @@
 </td></tr></table></div>
 </div>
 <h5 id="step2-config-the-configurationh">Step2. Config the configuration.h.<a class="headerlink" href="#step2-config-the-configurationh" title="Permanent link">&para;</a></h5>
-<p><img alt="1551170035746" src="../images/1551170035746.png" /></p>
-<p><img alt="1551170197283" src="../images/1551170197283.png" /></p>
+<p>In order to control RGB-LED, you also need to turn on the RGB control in marlin.</p>
+<p>For V1.2 and V2.0: </p>
+<p>You need enable the RGB_LED, and config the R/G/B pins.</p>
+<div class="superfences-tabs">
+<input name="__tabs_3" type="radio" id="__tab_3_0" checked="checked" />
+<label for="__tab_3_0">configration.h</label>
+<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cm">/************ 1.enable this line for mini12864 V1.2 and V2.0 **************/</span>
+<span class="cp">#define RGB_LED </span>
+<span class="c1">//#define RGBW_LED</span>
+
+<span class="cp">#if ENABLED(RGB_LED) || ENABLED(RGBW_LED)</span>
+<span class="cm">/************ 2.change the 3 line for mini12864 V1.2 and V2.0 **************/</span>
+  <span class="cp">#define RGB_LED_R_PIN 25</span>
+  <span class="cp">#define RGB_LED_G_PIN 27</span>
+  <span class="cp">#define RGB_LED_B_PIN 29</span>
+  <span class="cp">#define RGB_LED_W_PIN -1</span>
+<span class="cp">#endif</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<p>For V2.1:</p>
+<p>You only need enable the NEOPIXEL_LED.</p>
+<div class="superfences-tabs">
+<input name="__tabs_4" type="radio" id="__tab_4_0" checked="checked" />
+<label for="__tab_4_0">configration.h</label>
+<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1">// Support for Adafruit Neopixel LED driver</span>
+<span class="cm">/********** 1. only need enable the NEOPINEL_LED for mini12864 V2.1 **********/</span>
+<span class="cp">#define NEOPIXEL_LED</span>
+<span class="cp">#if ENABLED(NEOPIXEL_LED)</span>
+  <span class="cp">#define NEOPIXEL_TYPE   NEO_GRBW </span><span class="c1">// NEO_GRBW / NEO_GRB - four/three channel driver type (defined in Adafruit_NeoPixel.h)</span>
+  <span class="cp">#define NEOPIXEL_PIN    4        </span><span class="c1">// LED driving pin on motherboard 4 =&gt; D4 (EXP2-5 on Printrboard) / 30 =&gt; PC7 (EXP3-13 on Rumba)</span>
+  <span class="cp">#define NEOPIXEL_PIXELS 30       </span><span class="c1">// Number of LEDs in the strip</span>
+  <span class="cp">#define NEOPIXEL_IS_SEQUENTIAL   </span><span class="c1">// Sequential display for temperature change - LED by LED. Disable to change all LEDs at once.</span>
+  <span class="cp">#define NEOPIXEL_BRIGHTNESS 127  </span><span class="c1">// Initial brightness (0-255)</span>
+  <span class="c1">//#define NEOPIXEL_STARTUP_TEST  // Cycle through colors at startup</span>
+<span class="cp">#endif</span>
+</pre></div>
+</td></tr></table></div>
+</div>
 <h5 id="step3-config-the-configuration_advh">Step3. Config the configuration_adv.h.<a class="headerlink" href="#step3-config-the-configuration_advh" title="Permanent link">&para;</a></h5>
-<p><img alt="1551170652167" src="../images/1551170652167.png" /></p>
+<p>If you need to change the RGB-color manually,  then you need to enable the LED_CONTROL_MENU in configuration_adv.h. If you don't need it, you can skip this step.</p>
+<div class="superfences-tabs">
+<input name="__tabs_5" type="radio" id="__tab_5_0" checked="checked" />
+<label for="__tab_5_0">configration_adv.h</label>
+<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cm">/**</span>
+<span class="cm"> * LED Control Menu</span>
+<span class="cm"> * Enable this feature to add LED Control to the LCD menu</span>
+<span class="cm"> */</span>
+<span class="cm">/********** 1. enable the LED_CONTROL_MENU RGB manual control **********/</span>
+<span class="cp">#define LED_CONTROL_MENU</span>
+<span class="cp">#if ENABLED(LED_CONTROL_MENU)</span>
+  <span class="cp">#define LED_COLOR_PRESETS                 </span><span class="c1">// Enable the Preset Color menu option</span>
+  <span class="cp">#if ENABLED(LED_COLOR_PRESETS)</span>
+    <span class="cp">#define LED_USER_PRESET_RED        255  </span><span class="c1">// User defined RED value</span>
+    <span class="cp">#define LED_USER_PRESET_GREEN      128  </span><span class="c1">// User defined GREEN value</span>
+    <span class="cp">#define LED_USER_PRESET_BLUE         0  </span><span class="c1">// User defined BLUE value</span>
+    <span class="cp">#define LED_USER_PRESET_WHITE      255  </span><span class="c1">// User defined WHITE value</span>
+    <span class="cp">#define LED_USER_PRESET_BRIGHTNESS 255  </span><span class="c1">// User defined intensity</span>
+    <span class="c1">//#define LED_USER_PRESET_STARTUP       // Have the printer display the user preset color on startup</span>
+  <span class="cp">#endif</span>
+<span class="cp">#endif </span><span class="c1">// LED_CONTROL_MENU</span>
+</pre></div>
+</td></tr></table></div>
+</div>
 <h5 id="step4-add-the-codes-in-ultralcd_impl_dogmh">Step4. add the codes in ultralcd_impl_DOGM.h.<a class="headerlink" href="#step4-add-the-codes-in-ultralcd_impl_dogmh" title="Permanent link">&para;</a></h5>
+<p>You need to add a shorts codes to ultralcd_impl_DOGM.h, otherwise your screen may not have text displayed, or it may not be clear.
+Add  "u8g.setContrast(255);" in the "static void lcd_implementation_init()" function:</p>
 <p><img alt="1551170953232" src="../images/1551170953232.png" /></p>
+<h2 id="optional-hardware-module">Optional Hardware module:<a class="headerlink" href="#optional-hardware-module" title="Permanent link">&para;</a></h2>
+<p>The SD card of mini12864 can be  set on the side or in the front,  which requires a module to implement. As shown below:</p>
 <h2 id="attention">Attention<a class="headerlink" href="#attention" title="Permanent link">&para;</a></h2>
 <p>-TBD-</p>
 <h2 id="faq">FAQ<a class="headerlink" href="#faq" title="Permanent link">&para;</a></h2>
-<p>-TBD-</p>
+<ol>
+<li>
+<p>Q: What drive is used for the screen?
+   A: Sitronix ST7567,  You can get the specification in our <a href="https://github.com/FYSETC/Mini-12864-Panel">github</a>.</p>
+</li>
+<li>
+<p>Q: What is the difference between the three versions?</p>
+</li>
+</ol>
+<p>A: Only the backlight is different, the wiki has a detailed description at the beginning.</p>
 <h2 id="attachments">Attachments<a class="headerlink" href="#attachments" title="Permanent link">&para;</a></h2>
 <h3 id="1-schematic">1. Schematic<a class="headerlink" href="#1-schematic" title="Permanent link">&para;</a></h3>
 <hr />
-<p><img alt="" src="../images/mini12864_sch.png" /></p>
+<p>You can find the schematics for the three versions on <a href="https://github.com/FYSETC/Mini-12864-Panel">github</a>.</p>
 <h3 id="2-dimensions">2. Dimensions<a class="headerlink" href="#2-dimensions" title="Permanent link">&para;</a></h3>
 <hr />
 <p><img alt="" src="../images/mini12864_dim.png" /></p>
-<p><strong>For detailed dimensions please check dwg/step file on github.</strong></p>
+<p><strong>For detailed dimensions please check dwg/step file on <a href="https://github.com/FYSETC/Mini-12864-Panel">github</a>.</strong></p>
 <h2 id="shop">Shop<a class="headerlink" href="#shop" title="Permanent link">&para;</a></h2>
 <hr />
 <ul>
@@ -1388,10 +1513,7 @@
 </ul>
 <h2 id="tech-support">Tech Support<a class="headerlink" href="#tech-support" title="Permanent link">&para;</a></h2>
 <hr />
-<p>Please submit any technical issue into our <a href="http://forum.fysetc.com/">forum</a> </p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>
-</pre></div>
-</td></tr></table>
+<p>Please submit any technical issue into our <a href="http://forum.fysetc.com/">forum</a> or <a href="https://www.facebook.com/groups/197476557529090/">facebook</a>.</p>
                 
                   
                 
@@ -1496,7 +1618,7 @@
     
       <script src="../assets/javascripts/application.583bbe55.js"></script>
       
-      <script>app.initialize({version:"1.0",url:{base:".."}})</script>
+      <script>app.initialize({version:"1.0.3",url:{base:".."}})</script>
       
     
     

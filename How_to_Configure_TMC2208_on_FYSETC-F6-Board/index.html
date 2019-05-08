@@ -38,7 +38,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-\.]+">
       
       <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0, mkdocs-material-3.0.3">
+      <meta name="generator" content="mkdocs-1.0.3, mkdocs-material-3.0.4">
     
     
       
@@ -60,8 +60,8 @@
       <script src="../assets/javascripts/modernizr.1aa3b519.js"></script>
     
     
-      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
       
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
@@ -1060,7 +1060,7 @@
 <h2 id="step2modify-marlin-firmware-tmc2208-part-code">Step2:Modify Marlin Firmware TMC2208 Part Code<a class="headerlink" href="#step2modify-marlin-firmware-tmc2208-part-code" title="Permanent link">&para;</a></h2>
 <hr />
 <p>Open stepper_indirection.cpp file , modify it as below shows.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -1074,14 +1074,14 @@
 
 <p>Just comment the old defines and change it to the added defines.</p>
 <p>And then add below two lines to tmc2208_init function,</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">st</span><span class="p">.</span><span class="n">beginSerial</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span>   <span class="c1">// Start software serial</span>
 <span class="n">st</span><span class="p">.</span><span class="n">push</span><span class="p">();</span>                <span class="c1">// Reset registers ，default: Use PDN/UART pin for communication</span>
 </pre></div>
 </td></tr></table>
 
 <p>and the function become:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -1162,7 +1162,7 @@
 <h2 id="step3change-the-configuration-in-configuration_advh-file">Step3:Change the Configuration in Configuration_adv.h File<a class="headerlink" href="#step3change-the-configuration-in-configuration_advh-file" title="Permanent link">&para;</a></h2>
 <hr />
 <p>Uncomment the TMC2208 configuration and choose the axis that your 3d printer have, like our test machine we will do like this:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -1348,7 +1348,7 @@
     
       <script src="../assets/javascripts/application.583bbe55.js"></script>
       
-      <script>app.initialize({version:"1.0",url:{base:".."}})</script>
+      <script>app.initialize({version:"1.0.3",url:{base:".."}})</script>
       
     
     
