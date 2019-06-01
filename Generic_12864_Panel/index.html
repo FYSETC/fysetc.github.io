@@ -13,7 +13,7 @@
         <meta name="description" content="fysetc product documentation">
       
       
-        <link rel="canonical" href="http://wiki.fysetc.com/FYS_Boost_LED_Driver_V1.0/">
+        <link rel="canonical" href="http://wiki.fysetc.com/Generic_12864_Panel/">
       
       
         <meta name="author" content="Tina">
@@ -42,7 +42,7 @@
     
     
       
-        <title>FYS Boost LED Driver V1.0 - FYSETC WIKI</title>
+        <title>Generic 12864 Panel - FYSETC WIKI</title>
       
     
     
@@ -130,7 +130,7 @@
                 FYSETC WIKI
               </span>
               <span class="md-header-nav__topic">
-                FYS Boost LED Driver V1.0
+                Generic 12864 Panel
               </span>
             
           
@@ -329,10 +329,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
     
     <label class="md-nav__link" for="nav-3">
       LCDs and Displays
@@ -372,11 +374,175 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../Generic_12864_Panel/" title="Generic 12864 Panel" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Generic 12864 Panel
+      </label>
+    
+    <a href="./" title="Generic 12864 Panel" class="md-nav__link md-nav__link--active">
       Generic 12864 Panel
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#product-introduction" title="Product Introduction" class="md-nav__link">
+    Product Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#features" title="Features" class="md-nav__link">
+    Features
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#application" title="Application" class="md-nav__link">
+    Application
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#typical-wiring" title="Typical  Wiring" class="md-nav__link">
+    Typical  Wiring
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#firmware-config" title="Firmware config" class="md-nav__link">
+    Firmware config
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step1-changes-the-pins" title="Step1. changes the pins." class="md-nav__link">
+    Step1. changes the pins.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step2-config-the-configurationh" title="Step2. Config the configuration.h." class="md-nav__link">
+    Step2. Config the configuration.h.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step3-config-the-configuration_advh" title="Step3. Config the configuration_adv.h." class="md-nav__link">
+    Step3. Config the configuration_adv.h.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step4-add-the-codes-in-ultralcd_impl_dogmh" title="Step4. add the codes in ultralcd_impl_DOGM.h." class="md-nav__link">
+    Step4. add the codes in ultralcd_impl_DOGM.h.
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optional-hardware-module" title="Optional Hardware module:" class="md-nav__link">
+    Optional Hardware module:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attention" title="Attention" class="md-nav__link">
+    Attention
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faq" title="FAQ" class="md-nav__link">
+    FAQ
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attachments" title="Attachments" class="md-nav__link">
+    Attachments
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-schematic" title="1. Schematic" class="md-nav__link">
+    1. Schematic
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-dimensions" title="2. Dimensions" class="md-nav__link">
+    2. Dimensions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shop" title="Shop" class="md-nav__link">
+    Shop
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tech-support" title="Tech Support" class="md-nav__link">
+    Tech Support
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+        <li class="md-nav__item">
+          <a href="#__comments" title="Comments" class="md-nav__link md-nav__link--active">
+            Comments
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -881,12 +1047,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
     
     <label class="md-nav__link" for="nav-11">
       Others
@@ -914,127 +1078,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        FYS Boost LED Driver V1.0
-      </label>
-    
-    <a href="./" title="FYS Boost LED Driver V1.0" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../FYS_Boost_LED_Driver_V1.0/" title="FYS Boost LED Driver V1.0" class="md-nav__link">
       FYS Boost LED Driver V1.0
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#product-introduction" title="Product Introduction" class="md-nav__link">
-    Product Introduction
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#features" title="Features" class="md-nav__link">
-    Features
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#applications" title="Applications" class="md-nav__link">
-    Applications
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#typical-application-circuit" title="Typical Application Circuit" class="md-nav__link">
-    Typical Application Circuit
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#attention" title="Attention" class="md-nav__link">
-    Attention
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#faq" title="FAQ" class="md-nav__link">
-    FAQ
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#attachments" title="Attachments" class="md-nav__link">
-    Attachments
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#schematic" title="Schematic" class="md-nav__link">
-    Schematic
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#dimensions" title="Dimensions" class="md-nav__link">
-    Dimensions
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#shop" title="Shop" class="md-nav__link">
-    Shop
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tech-support" title="Tech Support" class="md-nav__link">
-    Tech Support
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-        <li class="md-nav__item">
-          <a href="#__comments" title="Comments" class="md-nav__link md-nav__link--active">
-            Comments
-          </a>
-        </li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -1136,15 +1184,63 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#applications" title="Applications" class="md-nav__link">
-    Applications
+  <a href="#application" title="Application" class="md-nav__link">
+    Application
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#typical-application-circuit" title="Typical Application Circuit" class="md-nav__link">
-    Typical Application Circuit
+  <a href="#typical-wiring" title="Typical  Wiring" class="md-nav__link">
+    Typical  Wiring
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#firmware-config" title="Firmware config" class="md-nav__link">
+    Firmware config
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step1-changes-the-pins" title="Step1. changes the pins." class="md-nav__link">
+    Step1. changes the pins.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step2-config-the-configurationh" title="Step2. Config the configuration.h." class="md-nav__link">
+    Step2. Config the configuration.h.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step3-config-the-configuration_advh" title="Step3. Config the configuration_adv.h." class="md-nav__link">
+    Step3. Config the configuration_adv.h.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step4-add-the-codes-in-ultralcd_impl_dogmh" title="Step4. add the codes in ultralcd_impl_DOGM.h." class="md-nav__link">
+    Step4. add the codes in ultralcd_impl_DOGM.h.
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optional-hardware-module" title="Optional Hardware module:" class="md-nav__link">
+    Optional Hardware module:
   </a>
   
 </li>
@@ -1172,15 +1268,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#schematic" title="Schematic" class="md-nav__link">
-    Schematic
+  <a href="#1-schematic" title="1. Schematic" class="md-nav__link">
+    1. Schematic
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#dimensions" title="Dimensions" class="md-nav__link">
-    Dimensions
+  <a href="#2-dimensions" title="2. Dimensions" class="md-nav__link">
+    2. Dimensions
   </a>
   
 </li>
@@ -1226,70 +1322,228 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/fysetc/blob/master/docs/FYS_Boost_LED_Driver_V1.0.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/fysetc/blob/master/docs/Generic_12864_Panel.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>FYS Boost LED Driver V1.0</h1>
+                  <h1>Generic 12864 Panel</h1>
                 
                 <h2 id="product-introduction">Product Introduction<a class="headerlink" href="#product-introduction" title="Permanent link">&para;</a></h2>
-<hr />
-<p><img alt="30w-LED-driver" src="../images/30w-LED-driver.jpg" /></p>
-<p>FYS Boost LED Driver is an economical and easy to use driver with a maximum output of 60V/5A (requires you to replace the Rs resistor). By default, a 900mA ± 5% current output is available for 30W LEDs (10 parallel 3 series) modules.</p>
+<p><img alt="Mini12864" src="../images/Generic_12864_TOP.png" /></p>
+<p>This is a opensouce, cheap, with RGB indicator, common to marlin's display, supports offline printing, resolution is 12864, display area is 3.2'', SD card holder can be side or vertical, Dimensional compatible with REPRAP_DISCOUNT_FULL_GRAPHIC_SMART_CONTROLLER, Software compatible with MINIPANEL in marlin firmware.</p>
+<p>Available in a single backlight color version, also available in RGB backlight (NEOPIXEL_LED)version.Choose according to your preferences！</p>
 <h2 id="features">Features<a class="headerlink" href="#features" title="Permanent link">&para;</a></h2>
-<hr />
 <ul>
-<li>Wide 5V to 32V Input Voltage Range</li>
-<li>Maximum Boost Output Up to 60V</li>
-<li>0.22V FB adjustable LED drive current</li>
-<li>Max. 5A Switching Current Capability</li>
-<li>Up to 93% efficiency</li>
-<li>Excellent line and load regulation</li>
-<li>Thermal Shutdown Function</li>
-<li>Built in Current Limit Function</li>
+<li>3.2" inch high contrast Graphic LCD,Dimensional compatible with REPRAP_DISCOUNT_FULL_GRAPHIC_SMART_CONTROLLER</li>
+<li>Black-gray/black-green/white-black/white-blue/green-black, 5 display styles</li>
+<li>SPI communication to host micro-controller</li>
+<li>Support Vertical or side SD slot with card detect,with a optional  SD module</li>
+<li>Software configurable contrast setting</li>
+<li>3D printable case and mount STL file </li>
+<li>Configurable RGB backlight, WS2811 single line control.</li>
+<li>Black background or transparent backgroun.</li>
+<li>The extra EXP3 is 1284P or a motherboard that requires a single display function.</li>
 </ul>
-<h2 id="applications">Applications<a class="headerlink" href="#applications" title="Permanent link">&para;</a></h2>
-<hr />
-<ul>
-<li>LED Lighting </li>
-<li>Boost constant current driver</li>
-<li>TFT LED Backlighting</li>
-</ul>
-<h2 id="typical-application-circuit">Typical Application Circuit<a class="headerlink" href="#typical-application-circuit" title="Permanent link">&para;</a></h2>
-<hr />
-<p><img alt="LED DRIVER 接线图" src="../images/LED-DRIVER接线图.png" /></p>
-<h2 id="attention">Attention<a class="headerlink" href="#attention" title="Permanent link">&para;</a></h2>
-<hr />
-<ul>
-<li>The board will be fever during use (about 60 °C at 900 mA), which is normal and need not be worried;</li>
-<li>Do not connect the positive and negative poles of the board input and output, otherwise it will damage the board;</li>
-<li>If a higher current is required, please follow the part of FAQ. Larger currents will cause the board to heat up, requiring good heat dissipation conditions, such as sticking heatsinks and adding fans.</li>
-<li>The power of the drive is greater than the power required by the LED, and the LED will flash brightly;</li>
-<li>The power of the drive is less than the power required by the LED, and the LED will flash dimly or not;</li>
-<li><font color="red">The company is not responsible for any damage or loss caused by the private modification of the board.</font></li>
-</ul>
-<h2 id="faq">FAQ<a class="headerlink" href="#faq" title="Permanent link">&para;</a></h2>
-<hr />
-<div class="admonition question">
-<p class="admonition-title">How to change to a larger current output manually?</p>
-<p>If you want to change to other current outputs:
-1. you need to have the soldering tool and the corresponding soldering skills; 
-2. you need 1 or 2 1206 resistors, the resistance can be based on Iout = 0.22/Rs; 
-3. you only need Remove the two resistors labeled Rs on the board and replace them with the resistors you need for the current output.</p>
+<h2 id="application">Application<a class="headerlink" href="#application" title="Permanent link">&para;</a></h2>
+<p>3D printer，CNC machines ，Other micro controller projects</p>
+<h2 id="typical-wiring">Typical  Wiring<a class="headerlink" href="#typical-wiring" title="Permanent link">&para;</a></h2>
+<p><img alt="" src="images/" /></p>
+<p><img alt="" src="../images/Mini12864-EXP1.svg" /></p>
+<p><img alt="" src="../images/Mini12864-EXP2.svg" /></p>
+<h2 id="firmware-config">Firmware config<a class="headerlink" href="#firmware-config" title="Permanent link">&para;</a></h2>
+<p>This screen driver is ST7567 and is compatible with the marlin Mini panel (UC1701,same as ST7567). It has been tested well, and the following configuration is required.</p>
+<p><strong>Before you start, please install the latest version of U8glib.</strong></p>
+<h5 id="step1-changes-the-pins">Step1. changes the pins.<a class="headerlink" href="#step1-changes-the-pins" title="Permanent link">&para;</a></h5>
+<p>On a RAMPS-compatible board, you need to make the following changes in pins_RAMPS.h:</p>
+<div class="superfences-tabs">
+<input name="__tabs_1" type="radio" id="__tab_1_0" checked="checked" />
+<label for="__tab_1_0">pins_RAMPS.h</label>
+<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16</pre></div></td><td class="code"><div class="codehilite"><pre><span></span> <span class="cp">#elif ENABLED(MINIPANEL)</span>
+      <span class="cp">#define BEEPER_PIN 37</span>
+      <span class="c1">// Pins for DOGM SPI LCD Support</span>
+      <span class="cp">#define DOGLCD_A0  16</span>
+      <span class="cp">#define DOGLCD_CS  17</span>
+      <span class="cp">#define LCD_BACKLIGHT_PIN 27 </span><span class="c1">// backlight LED on A11/D65</span>
+      <span class="cp">#define LCD_RESET_PIN  23</span>
+      <span class="cp">#define SDSS   53</span>
+
+      <span class="cp">#define KILL_PIN -1</span>
+      <span class="cp">#define LCD_CONTRAST 200</span>
+      <span class="cp">#define BTN_EN1 31</span>
+      <span class="cp">#define BTN_EN2 33</span>
+      <span class="cp">#define BTN_ENC 35  </span><span class="c1">//the click switch</span>
+
+      <span class="cp">#define SD_DETECT_PIN 49</span>
+</pre></div>
+</td></tr></table></div>
 </div>
+<p>On a our F6 board, you need to make the following changes in pins_FYSETC_F6_V13.h:</p>
+<div class="superfences-tabs">
+<input name="__tabs_2" type="radio" id="__tab_2_0" checked="checked" />
+<label for="__tab_2_0">pins_FYSETC_F6_V13.h</label>
+<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1">//////////////////////////</span>
+<span class="c1">// LCDs and Controllers //</span>
+<span class="c1">//////////////////////////</span>
+
+    <span class="c1">// #define LCD_PINS_RS         16</span>
+    <span class="c1">// #define LCD_PINS_ENABLE     17</span>
+    <span class="c1">// #define LCD_PINS_D4         23</span>
+    <span class="c1">// #define LCD_PINS_D5         25</span>
+    <span class="c1">// #define LCD_PINS_D6         27</span>
+    <span class="c1">// #define LCD_PINS_D7         29</span>
+
+    <span class="c1">// Pins for DOGM SPI LCD Support</span>
+    <span class="cp">#define DOGLCD_A0  16</span>
+    <span class="cp">#define DOGLCD_CS  17</span>
+    <span class="cp">#define LCD_BACKLIGHT_PIN 27 </span>
+    <span class="cp">#define LCD_RESET_PIN  23</span>
+    <span class="cp">#define LCD_CONTRAST 200</span>
+
+    <span class="cp">#define SDSS   53</span>
+    <span class="cp">#define BEEPER_PIN          37</span>
+    <span class="cp">#define BTN_EN1             31</span>
+    <span class="cp">#define BTN_EN2             33</span>
+    <span class="cp">#define BTN_ENC             35</span>
+    <span class="cp">#define SD_DETECT_PIN       49</span>
+    <span class="cp">#define KILL_PIN            -1</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<h5 id="step2-config-the-configurationh">Step2. Config the configuration.h.<a class="headerlink" href="#step2-config-the-configurationh" title="Permanent link">&para;</a></h5>
+<p>In order to control RGB-LED, you also need to turn on the RGB control in marlin.</p>
+<p>For RGB version:</p>
+<p>You only need enable the NEOPIXEL_LED.</p>
+<div class="superfences-tabs">
+<input name="__tabs_3" type="radio" id="__tab_3_0" checked="checked" />
+<label for="__tab_3_0">configration.h</label>
+<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1">// Support for Adafruit Neopixel LED driver</span>
+<span class="cm">/********** 1. only need enable the NEOPINEL_LED for mini12864 V2.1 **********/</span>
+<span class="cp">#define NEOPIXEL_LED</span>
+<span class="cp">#if ENABLED(NEOPIXEL_LED)</span>
+  <span class="cp">#define NEOPIXEL_TYPE   NEO_GRBW </span><span class="c1">// NEO_GRBW / NEO_GRB - four/three channel driver type (defined in Adafruit_NeoPixel.h)</span>
+  <span class="cp">#define NEOPIXEL_PIN    27        </span><span class="c1">// LED driving pin on motherboard 4 =&gt; D4 (EXP2-5 on Printrboard) / 30 =&gt; PC7 (EXP3-13 on Rumba)</span>
+  <span class="cp">#define NEOPIXEL_PIXELS 1       </span><span class="c1">// Number of LEDs in the strip</span>
+  <span class="cp">#define NEOPIXEL_IS_SEQUENTIAL   </span><span class="c1">// Sequential display for temperature change - LED by LED. Disable to change all LEDs at once.</span>
+  <span class="cp">#define NEOPIXEL_BRIGHTNESS 127  </span><span class="c1">// Initial brightness (0-255)</span>
+  <span class="c1">//#define NEOPIXEL_STARTUP_TEST  // Cycle through colors at startup</span>
+<span class="cp">#endif</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<h5 id="step3-config-the-configuration_advh">Step3. Config the configuration_adv.h.<a class="headerlink" href="#step3-config-the-configuration_advh" title="Permanent link">&para;</a></h5>
+<p>If you need to change the RGB-color manually,  then you need to enable the LED_CONTROL_MENU in configuration_adv.h. If you don't need it, you can skip this step.</p>
+<div class="superfences-tabs">
+<input name="__tabs_4" type="radio" id="__tab_4_0" checked="checked" />
+<label for="__tab_4_0">configration_adv.h</label>
+<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cm">/**</span>
+<span class="cm"> * LED Control Menu</span>
+<span class="cm"> * Enable this feature to add LED Control to the LCD menu</span>
+<span class="cm"> */</span>
+<span class="cm">/********** 1. enable the LED_CONTROL_MENU RGB manual control **********/</span>
+<span class="cp">#define LED_CONTROL_MENU</span>
+<span class="cp">#if ENABLED(LED_CONTROL_MENU)</span>
+  <span class="cp">#define LED_COLOR_PRESETS                 </span><span class="c1">// Enable the Preset Color menu option</span>
+  <span class="cp">#if ENABLED(LED_COLOR_PRESETS)</span>
+    <span class="cp">#define LED_USER_PRESET_RED        255  </span><span class="c1">// User defined RED value</span>
+    <span class="cp">#define LED_USER_PRESET_GREEN      128  </span><span class="c1">// User defined GREEN value</span>
+    <span class="cp">#define LED_USER_PRESET_BLUE         0  </span><span class="c1">// User defined BLUE value</span>
+    <span class="cp">#define LED_USER_PRESET_WHITE      255  </span><span class="c1">// User defined WHITE value</span>
+    <span class="cp">#define LED_USER_PRESET_BRIGHTNESS 255  </span><span class="c1">// User defined intensity</span>
+    <span class="c1">//#define LED_USER_PRESET_STARTUP       // Have the printer display the user preset color on startup</span>
+  <span class="cp">#endif</span>
+<span class="cp">#endif </span><span class="c1">// LED_CONTROL_MENU</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<h5 id="step4-add-the-codes-in-ultralcd_impl_dogmh">Step4. add the codes in ultralcd_impl_DOGM.h.<a class="headerlink" href="#step4-add-the-codes-in-ultralcd_impl_dogmh" title="Permanent link">&para;</a></h5>
+<p>You need to add a shorts codes to ultralcd_impl_DOGM.h, otherwise your screen may not have text displayed, or it may not be clear.
+Add  "u8g.setContrast(255);" in the "static void lcd_implementation_init()" function:</p>
+<p><img alt="1551170953232" src="../images/1551170953232.png" /></p>
+<h2 id="optional-hardware-module">Optional Hardware module:<a class="headerlink" href="#optional-hardware-module" title="Permanent link">&para;</a></h2>
+<p>The SD card of mini12864 can be  set on the side or in the front,  which requires a module to implement. As shown below:</p>
+<p><img alt="mini12864_SD1" src="../images/EXT_SD_V11.png" /></p>
+<h2 id="attention">Attention<a class="headerlink" href="#attention" title="Permanent link">&para;</a></h2>
+<p>-TBD-</p>
+<h2 id="faq">FAQ<a class="headerlink" href="#faq" title="Permanent link">&para;</a></h2>
+<p>-TBD-</p>
 <h2 id="attachments">Attachments<a class="headerlink" href="#attachments" title="Permanent link">&para;</a></h2>
+<h3 id="1-schematic">1. Schematic<a class="headerlink" href="#1-schematic" title="Permanent link">&para;</a></h3>
 <hr />
-<h3 id="schematic">Schematic<a class="headerlink" href="#schematic" title="Permanent link">&para;</a></h3>
-<p><img alt="LED-driver-schematic" src="../images/LED-driver-schematic.png" /></p>
-<h3 id="dimensions">Dimensions<a class="headerlink" href="#dimensions" title="Permanent link">&para;</a></h3>
-<p><img alt="LED-driver-dimensions" src="../images/LED-driver-dimensions.png" /></p>
+<p>You can find the schematics for the three versions on <a href="https://github.com/FYSETC/Generic-12864-panel">github</a>.</p>
+<h3 id="2-dimensions">2. Dimensions<a class="headerlink" href="#2-dimensions" title="Permanent link">&para;</a></h3>
+<p><strong>For detailed dimensions please check dwg/step file on <a href="https://github.com/FYSETC/Generic-12864-panel">github</a>.</strong></p>
 <h2 id="shop">Shop<a class="headerlink" href="#shop" title="Permanent link">&para;</a></h2>
 <hr />
 <ul>
-<li><a href="https://www.aliexpress.com/store/product/DLP-Boost-LED-drive-board-60V-5A-30W-Constant-Current-Driver-for-LED-Lighting-TFT-Backlighting/3480083_32905681524.html">FYS Boost LED Driver V1.0</a></li>
+<li><a href="https://www.aliexpress.com/item/33029483516.html">Gineric 12864_LCD</a></li>
 </ul>
 <h2 id="tech-support">Tech Support<a class="headerlink" href="#tech-support" title="Permanent link">&para;</a></h2>
 <hr />
-<p>Please submit any technical issue into our <a href="http://forum.fysetc.com/">forum</a> </p>
+<p>Please submit any technical issue into our <a href="http://forum.fysetc.com/">forum</a> or <a href="https://www.facebook.com/groups/197476557529090/">facebook</a>.</p>
                 
                   
                 
@@ -1302,9 +1556,9 @@
   <div id="disqus_thread"></div>
   <script>
     var disqus_config = function () {
-      this.page.url = "http://wiki.fysetc.com/FYS_Boost_LED_Driver_V1.0/";
+      this.page.url = "http://wiki.fysetc.com/Generic_12864_Panel/";
       this.page.identifier =
-        "/FYS_Boost_LED_Driver_V1.0/";
+        "/Generic_12864_Panel/";
     };
     (function() {
       var d = document, s = d.createElement("script");
@@ -1326,7 +1580,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../Others/" title="Others Introduction" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../Mini12864_Panel/" title="Mini12864 Panel" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1335,19 +1589,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Others Introduction
+                Mini12864 Panel
               </span>
             </div>
           </a>
         
         
-          <a href="../FYS_Boost_LED_Driver_V1.0中文版/" title="FYS Boost LED Driver V1.0中文版" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../FYS_Touch_Panel/" title="FYS Touch Lcd" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                FYS Boost LED Driver V1.0中文版
+                FYS Touch Lcd
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
