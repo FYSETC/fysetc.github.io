@@ -367,6 +367,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#connectors-and-jumpers-define" title="Connectors and jumpers define" class="md-nav__link">
+    Connectors and jumpers define
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#firmware" title="Firmware" class="md-nav__link">
     Firmware
   </a>
@@ -1143,6 +1150,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#connectors-and-jumpers-define" title="Connectors and jumpers define" class="md-nav__link">
+    Connectors and jumpers define
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#firmware" title="Firmware" class="md-nav__link">
     Firmware
   </a>
@@ -1219,7 +1233,7 @@
                 
                 <h2 id="product-introduction">Product Introduction<a class="headerlink" href="#product-introduction" title="Permanent link">&para;</a></h2>
 <hr />
-<p><img alt="Cheetah_top" src="../images/Cheetah_top.png" /></p>
+<p><img alt="Cheetah_top" src="../images/Cheetah_Real.jpg" /></p>
 <p>Designed for a single-head 3D printer, many interfaces are reserved for more features. Such as AC detection, filament detection, leveling with BL-touch or other sensors.</p>
 <h2 id="features">Features<a class="headerlink" href="#features" title="Permanent link">&para;</a></h2>
 <hr />
@@ -1339,7 +1353,12 @@
 </tr>
 </tbody>
 </table>
+<h2 id="connectors-and-jumpers-define">Connectors and jumpers define<a class="headerlink" href="#connectors-and-jumpers-define" title="Permanent link">&para;</a></h2>
+<hr />
+<p><img alt="Cheetah_connectors" src="../images/Cheetah_connector.png" />
+<img alt="Cheetah_jumpers" src="../images/Cheetah_jumpers.png" /></p>
 <h2 id="firmware">Firmware<a class="headerlink" href="#firmware" title="Permanent link">&para;</a></h2>
+<hr />
 <p>The FYSETC CHEETAH firmware is pre-config for ENDER3 machine, if you want to change the firmware or compile the code yourself , follow the steps.</p>
 <h4 id="download-vscode-platformio">Download Vscode + platformio<a class="headerlink" href="#download-vscode-platformio" title="Permanent link">&para;</a></h4>
 <p>To compile the firmware , you need to install Visual Studio Code and the platformio pulg-in.</p>
@@ -1352,14 +1371,14 @@
 <p><img alt="1561099546202" src="../images/1561099546202.png" /></p>
 <p>The check mark is for compiling , click it to compile.</p>
 <h4 id="upload-the-firmware">Upload the firmware<a class="headerlink" href="#upload-the-firmware" title="Permanent link">&para;</a></h4>
-<p>After compiling , you should see the firmware file "firmware.hex" in the folder FIRMWARE_LOCATE\Marlin\Marlin.pioenvs\fysetc_CHEETAH\</p>
+<p>After compiling , you should see the firmware file "firmware.hex" in the folder FIRMWARE_LOCATE\Marlin\Marlin\.pioenvs\fysetc_CHEETAH\</p>
 <p>Download the flash software in our github <a href="https://github.com/FYSETC/STM32Flasher">https://github.com/FYSETC/STM32Flasher</a></p>
 <p>Connect the board and your pc with USB cable (This step should before you open the software)</p>
 <p>Double the click "FlyMcu.exe" software to open it.</p>
 <p><img alt="1561100540118" src="../images/1561100540118.png" /></p>
 <p>Select "Reset@DTR low(&lt;-3v),ISP @RTS High"</p>
 <p>Click "Port" to select the port of your USB </p>
-<p>Select FIRMWARE_LOCATE\Marlin\Marlin.pioenvs\fysetc_CHEETAH\firmware.hex as the screenshot shows.</p>
+<p>Select FIRMWARE_LOCATE\Marlin\Marlin\.pioenvs\fysetc_CHEETAH\firmware.hex as the screenshot shows.</p>
 <p>At last , "Start ISP(p)" to upload the firmware.</p>
 <h2 id="tech-support">Tech Support<a class="headerlink" href="#tech-support" title="Permanent link">&para;</a></h2>
 <hr />
