@@ -359,12 +359,66 @@
     Pin Definition
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#connector-define" title="Connector define：" class="md-nav__link">
+    Connector define：
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#microsteps-setting" title="microsteps setting：" class="md-nav__link">
+    microsteps setting：
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
   <a href="#firmware-guide" title="Firmware Guide" class="md-nav__link">
     Firmware Guide
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#download-vscode-platformio" title="Download Vscode + platformio" class="md-nav__link">
+    Download Vscode + platformio
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#download-firmware" title="Download firmware" class="md-nav__link">
+    Download firmware
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compile-the-firmware" title="Compile the firmware" class="md-nav__link">
+    Compile the firmware
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#upload-the-firmware" title="Upload the firmware" class="md-nav__link">
+    Upload the firmware
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1134,12 +1188,66 @@
     Pin Definition
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#connector-define" title="Connector define：" class="md-nav__link">
+    Connector define：
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#microsteps-setting" title="microsteps setting：" class="md-nav__link">
+    microsteps setting：
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
   <a href="#firmware-guide" title="Firmware Guide" class="md-nav__link">
     Firmware Guide
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#download-vscode-platformio" title="Download Vscode + platformio" class="md-nav__link">
+    Download Vscode + platformio
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#download-firmware" title="Download firmware" class="md-nav__link">
+    Download firmware
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compile-the-firmware" title="Compile the firmware" class="md-nav__link">
+    Compile the firmware
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#upload-the-firmware" title="Upload the firmware" class="md-nav__link">
+    Upload the firmware
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1304,8 +1412,44 @@
 </table>
 <h2 id="pin-definition">Pin Definition<a class="headerlink" href="#pin-definition" title="Permanent link">&para;</a></h2>
 <hr />
+<h5 id="connector-define">Connector define：<a class="headerlink" href="#connector-define" title="Permanent link">&para;</a></h5>
+<p><img alt="AIO_3.2_pinout" src="../images/AIO_3.2_pinout.PNG" /></p>
+<h5 id="microsteps-setting">microsteps setting：<a class="headerlink" href="#microsteps-setting" title="Permanent link">&para;</a></h5>
+<p><img alt="AIO_3.2_820_steps" src="../images/AIO_3.2_820_steps.png" /></p>
 <h2 id="firmware-guide">Firmware Guide<a class="headerlink" href="#firmware-guide" title="Permanent link">&para;</a></h2>
 <hr />
+<h4 id="download-vscode-platformio">Download Vscode + platformio<a class="headerlink" href="#download-vscode-platformio" title="Permanent link">&para;</a></h4>
+<p>To compile the firmware , you need to install Visual Studio Code and the platformio pulg-in.</p>
+<h4 id="download-firmware">Download firmware<a class="headerlink" href="#download-firmware" title="Permanent link">&para;</a></h4>
+<p>You can download the firmware from <a href="https://github.com/FYSETC/Marlin-2.0.x-FYSETC">https://github.com/FYSETC/Marlin-2.0.x-FYSETC</a> , and if you want to know what we have changed , we recommend to use git to get the code .</p>
+<p>The firmware you download is for Cheetah board in default，you need copy the configuration.h &amp; configuration_adv.h from config/Fysetc/AIO_II to the marlin folder.</p>
+<h4 id="compile-the-firmware">Compile the firmware<a class="headerlink" href="#compile-the-firmware" title="Permanent link">&para;</a></h4>
+<p>Open Vscode and open platformio main page and click the "Open Project" button , and direct to the folder where you put your firmware.</p>
+<p><img alt="1561099422559" src="../images/1561099422559.png" /></p>
+<p>If everything goes fine , at the bottom you can see several buttons</p>
+<p><img alt="1561099546202" src="../images/1561099546202.png" /></p>
+<p>The check mark is for compiling , click it to compile.</p>
+<p>For more detail information，you can refer to <a href="http://marlinfw.org/docs/basics/install_platformio.html">http://marlinfw.org/docs/basics/install_platformio.html</a></p>
+<h4 id="upload-the-firmware">Upload the firmware<a class="headerlink" href="#upload-the-firmware" title="Permanent link">&para;</a></h4>
+<p>After compiling , you should see the firmware file "firmware.hex" in the folder FIRMWARE_LOCATE\Marlin\Marlin\.pioenvs\fysetc_STM32F1\</p>
+<p>Download the flash software in our github <a href="https://github.com/FYSETC/STM32Flasher">https://github.com/FYSETC/STM32Flasher</a></p>
+<p>Connect the board and your pc with USB cable (This step should before you open the software)</p>
+<p>Double the click "FlyMcu.exe" software to open it.</p>
+<p><img alt="1561100540118" src="../images/1561100540118.png" /></p>
+<ol>
+<li>
+<p>Select "<strong><em>Reset@DTR low(&lt;-3v),ISP @RTS High</em></strong>"</p>
+</li>
+<li>
+<p>Click "Port" to select the port of your USB </p>
+</li>
+<li>
+<p>Select <strong><em>FIRMWARE_LOCATE\Marlin\Marlin\.pioenvs\fysetc_STM32F1\firmware.hex</em></strong> as the screenshot shows.</p>
+</li>
+<li>
+<p>At last ,click the "Start ISP(p)" to upload the firmware.</p>
+</li>
+</ol>
 <h2 id="attachments">Attachments<a class="headerlink" href="#attachments" title="Permanent link">&para;</a></h2>
 <hr />
 <ul>
