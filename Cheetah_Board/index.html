@@ -403,9 +403,43 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#upload-the-firmwarewindows" title="Upload the firmware(windows)" class="md-nav__link">
+    Upload the firmware(windows)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#upload-the-firmwarelinux" title="Upload the firmware(linux)" class="md-nav__link">
+    Upload the firmware(linux)
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#load-usb-driver" title="Load usb driver" class="md-nav__link">
+    Load usb driver
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-stm32flash-tool" title="Install stm32flash tool" class="md-nav__link">
+    Install stm32flash tool
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#upload-the-firmware" title="Upload the firmware" class="md-nav__link">
     Upload the firmware
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -1186,9 +1220,43 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#upload-the-firmwarewindows" title="Upload the firmware(windows)" class="md-nav__link">
+    Upload the firmware(windows)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#upload-the-firmwarelinux" title="Upload the firmware(linux)" class="md-nav__link">
+    Upload the firmware(linux)
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#load-usb-driver" title="Load usb driver" class="md-nav__link">
+    Load usb driver
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-stm32flash-tool" title="Install stm32flash tool" class="md-nav__link">
+    Install stm32flash tool
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#upload-the-firmware" title="Upload the firmware" class="md-nav__link">
     Upload the firmware
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -1370,7 +1438,8 @@
 <p>If everything goes fine , at the bottom you can see several buttons</p>
 <p><img alt="1561099546202" src="../images/1561099546202.png" /></p>
 <p>The check mark is for compiling , click it to compile.</p>
-<h4 id="upload-the-firmware">Upload the firmware<a class="headerlink" href="#upload-the-firmware" title="Permanent link">&para;</a></h4>
+<p>If you generate the hex file fail you may need to open vscode using Administrator Account .</p>
+<h4 id="upload-the-firmwarewindows">Upload the firmware(windows)<a class="headerlink" href="#upload-the-firmwarewindows" title="Permanent link">&para;</a></h4>
 <p>After compiling , you should see the firmware file "firmware.hex" in the folder FIRMWARE_LOCATE\Marlin\Marlin\.pioenvs\fysetc_STM32F1\</p>
 <p>Download the flash software in our github <a href="https://github.com/FYSETC/STM32Flasher">https://github.com/FYSETC/STM32Flasher</a></p>
 <p>Connect the board and your pc with USB cable (This step should before you open the software)</p>
@@ -1380,6 +1449,43 @@
 <p>Click "Port" to select the port of your USB </p>
 <p>Select FIRMWARE_LOCATE\Marlin\Marlin\.pioenvs\fysetc_STM32F1\firmware.hex as the screenshot shows.</p>
 <p>At last , "Start ISP(p)" to upload the firmware.</p>
+<h3 id="upload-the-firmwarelinux">Upload the firmware(linux)<a class="headerlink" href="#upload-the-firmwarelinux" title="Permanent link">&para;</a></h3>
+<h4 id="load-usb-driver">Load usb driver<a class="headerlink" href="#load-usb-driver" title="Permanent link">&para;</a></h4>
+<p>Delete the old version driver /lib/modules/$(uname -r)/kernel/drivers/usb/serial/ch341.ko</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>rm /lib/modules/$(uname -r)/kernel/drivers/usb/serial/ch341.ko
+</pre></div>
+</td></tr></table>
+
+<p>Download the CH34x driver(linux version) from our github</p>
+<p><a href="https://github.com/FYSETC/CH340-Driver">https://github.com/FYSETC/CH340-Driver</a></p>
+<p>follow the readme.txt to make and load the driver .</p>
+<p>If you want the driver load automatically every time your PC power up. You can copy the ch34x.ko file to </p>
+<p>directory /lib/modules/$(uname -r)/kernel/drivers/usb/serial/ , and do</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>depmod 
+</pre></div>
+</td></tr></table>
+
+<h4 id="install-stm32flash-tool">Install stm32flash tool<a class="headerlink" href="#install-stm32flash-tool" title="Permanent link">&para;</a></h4>
+<p>First get the code</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>git clone https://git.code.sf.net/p/stm32flash/code stm32flash-code
+</pre></div>
+</td></tr></table>
+
+<p>Then follow the INSTALL file to install the software</p>
+<h4 id="upload-the-firmware">Upload the firmware<a class="headerlink" href="#upload-the-firmware" title="Permanent link">&para;</a></h4>
+<p>Connect the motherboard with USB cable and your PC. And do</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>dmesg
+</pre></div>
+</td></tr></table>
+
+<p>And you will get message like </p>
+<p><img alt="1562654867797" src="C:\Users\George\AppData\Roaming\Typora\typora-user-images\1562654867797.png" /></p>
+<p>the ttyUSB0 is the port to communicate with the motherboard.</p>
+<p>And then go the the firmware.hex file location directory and do the follow command to upload the firmware</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span> stm32flash -w firmware.hex -v -i rts,-dtr /dev/ttyUSB0
+</pre></div>
+</td></tr></table>
+
 <h2 id="tech-support">Tech Support<a class="headerlink" href="#tech-support" title="Permanent link">&para;</a></h2>
 <hr />
 <p>Please submit any technical issue into our <a href="http://forum.fysetc.com/">forum</a> </p>
