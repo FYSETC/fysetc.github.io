@@ -1449,8 +1449,8 @@
 <p>Click "Port" to select the port of your USB </p>
 <p>Select FIRMWARE_LOCATE\Marlin\Marlin\.pioenvs\fysetc_STM32F1\firmware.hex as the screenshot shows.</p>
 <p>At last , "Start ISP(p)" to upload the firmware.</p>
-<h3 id="upload-the-firmwarelinux">Upload the firmware(linux)<a class="headerlink" href="#upload-the-firmwarelinux" title="Permanent link">&para;</a></h3>
-<h4 id="load-usb-driver">Load usb driver<a class="headerlink" href="#load-usb-driver" title="Permanent link">&para;</a></h4>
+<h4 id="upload-the-firmwarelinux">Upload the firmware(linux)<a class="headerlink" href="#upload-the-firmwarelinux" title="Permanent link">&para;</a></h4>
+<h5 id="load-usb-driver">Load usb driver<a class="headerlink" href="#load-usb-driver" title="Permanent link">&para;</a></h5>
 <p>Delete the old version driver /lib/modules/$(uname -r)/kernel/drivers/usb/serial/ch341.ko</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>rm /lib/modules/$(uname -r)/kernel/drivers/usb/serial/ch341.ko
 </pre></div>
@@ -1465,14 +1465,14 @@
 </pre></div>
 </td></tr></table>
 
-<h4 id="install-stm32flash-tool">Install stm32flash tool<a class="headerlink" href="#install-stm32flash-tool" title="Permanent link">&para;</a></h4>
+<h5 id="install-stm32flash-tool">Install stm32flash tool<a class="headerlink" href="#install-stm32flash-tool" title="Permanent link">&para;</a></h5>
 <p>First get the code</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>git clone https://git.code.sf.net/p/stm32flash/code stm32flash-code
 </pre></div>
 </td></tr></table>
 
 <p>Then follow the INSTALL file to install the software</p>
-<h4 id="upload-the-firmware">Upload the firmware<a class="headerlink" href="#upload-the-firmware" title="Permanent link">&para;</a></h4>
+<h5 id="upload-the-firmware">Upload the firmware<a class="headerlink" href="#upload-the-firmware" title="Permanent link">&para;</a></h5>
 <p>Connect the motherboard with USB cable and your PC. And do</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>dmesg
 </pre></div>
