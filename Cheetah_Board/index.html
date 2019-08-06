@@ -403,6 +403,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#upload-the-firmwarewindowslinuxmac" title="Upload the firmware(windows,linux,Mac)" class="md-nav__link">
+    Upload the firmware(windows,linux,Mac)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#upload-the-firmwarewindows" title="Upload the firmware(windows)" class="md-nav__link">
     Upload the firmware(windows)
   </a>
@@ -1220,6 +1227,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#upload-the-firmwarewindowslinuxmac" title="Upload the firmware(windows,linux,Mac)" class="md-nav__link">
+    Upload the firmware(windows,linux,Mac)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#upload-the-firmwarewindows" title="Upload the firmware(windows)" class="md-nav__link">
     Upload the firmware(windows)
   </a>
@@ -1437,8 +1451,14 @@
 <p><img alt="1561099422559" src="../images/1561099422559.png" /></p>
 <p>If everything goes fine , at the bottom you can see several buttons</p>
 <p><img alt="1561099546202" src="../images/1561099546202.png" /></p>
-<p>The check mark is for compiling , click it to compile.</p>
+<p>The check mark is for compiling .</p>
+<p>Open platformio.ini file and change the option default_envs as below.</p>
+<p>default_envs = fysetc_STM32F1</p>
+<p>And then replace the default configuration.h and configuration_adv.h with files locate in FIRMWARE_LOCATE\Marlin\Marlin\config\examples\FYSETC according to your board.</p>
+<p>Then click check mark to compile.</p>
 <p>If you generate the hex file fail you may need to open vscode using Administrator Account .</p>
+<h4 id="upload-the-firmwarewindowslinuxmac">Upload the firmware(windows,linux,Mac)<a class="headerlink" href="#upload-the-firmwarewindowslinuxmac" title="Permanent link">&para;</a></h4>
+<p>We provide several ways to upload the firmware .You can just click the upload button to upload the firmware or refer to the two methods below.</p>
 <h4 id="upload-the-firmwarewindows">Upload the firmware(windows)<a class="headerlink" href="#upload-the-firmwarewindows" title="Permanent link">&para;</a></h4>
 <p>After compiling , you should see the firmware file "firmware.hex" in the folder FIRMWARE_LOCATE\Marlin\Marlin\.pioenvs\fysetc_STM32F1\</p>
 <p>Download the flash software in our github <a href="https://github.com/FYSETC/STM32Flasher">https://github.com/FYSETC/STM32Flasher</a></p>
