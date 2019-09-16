@@ -872,6 +872,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Manual_for_Mini_panel_on_SKR/" title="How to Use Mini 12864 on SKR Board" class="md-nav__link">
+      How to Use Mini 12864 on SKR Board
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -1047,62 +1059,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#motor-current-setting" title="Motor Current Setting" class="md-nav__link">
-    Motor Current Setting
+  <a href="#mode-selection" title="Mode selection" class="md-nav__link">
+    Mode selection
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#calculator" title="Calculator" class="md-nav__link">
-    Calculator
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#micro-stepping" title="Micro-stepping" class="md-nav__link">
-    Micro-stepping
+  <a href="#f6-jumper-for-tmc5160-spi-mode" title="F6 jumper for TMC5160 SPI mode" class="md-nav__link">
+    F6 jumper for TMC5160 SPI mode
   </a>
   
 </li>
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#setting-method" title="Setting Method" class="md-nav__link">
-    Setting Method
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#to-run-the-program" title="To run the program:" class="md-nav__link">
-    To run the program:
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#hardware-connection" title="Hardware Connection" class="md-nav__link">
-    Hardware Connection
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#versions-difference" title="Versions Difference" class="md-nav__link">
-    Versions Difference
-  </a>
   
 </li>
       
@@ -1298,11 +1269,15 @@
 </tr>
 <tr>
 <td align="center"></td>
-<td><strong>TMC5161</strong></td>
+<td><strong>TMC5160</strong></td>
 </tr>
 <tr>
 <td align="center">EN</td>
 <td>Enable Motor Outputs: GND=on, VIO=off</td>
+</tr>
+<tr>
+<td align="center">CLK</td>
+<td>CLK input.Tie to GND using short wire for internal clock or supply external clock.Internal clock-fail over circuit protects against loss of external clock signal.</td>
 </tr>
 <tr>
 <td align="center">SDI</td>
@@ -1324,127 +1299,34 @@
 <td align="center">DIAG</td>
 <td>Diagnostics output DIAG0.</td>
 </tr>
+<tr>
+<td align="center">ENCB</td>
+<td>DcStep enable input (SD_MODE=1,SPI_MODE=1)–leave open</td>
+</tr>
+<tr>
+<td align="center">ENCA</td>
+<td>DcStep gating input for axis synchronization</td>
+</tr>
+<tr>
+<td align="center">ENCN</td>
+<td>DcStep ready output(SD_MODE=1)</td>
+</tr>
 </tbody>
 </table>
 <h2 id="interface-resources">Interface Resources<a class="headerlink" href="#interface-resources" title="Permanent link">&para;</a></h2>
 <hr />
 <h3 id="wiring-diagram">Wiring Diagram<a class="headerlink" href="#wiring-diagram" title="Permanent link">&para;</a></h3>
-<p><img alt="TMC2208-wiring-diagram" src="../images/TMC2208-wiring-diagram.png" /></p>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-</div>
-<p>​    The TMC2208 outputs continuous motor current up to 1.4A and peak current up to 2A. Therefore, the reference voltage of the driver module should not exceed 1V. At the same time, the driver module must be dissipated, otherwise it will affect the life of the driver module.</p>
-<h3 id="motor-current-setting">Motor Current Setting<a class="headerlink" href="#motor-current-setting" title="Permanent link">&para;</a></h3>
-<p><img alt="TMC2208-current-setting" src="../images/TMC2208-current-setting.png" /></p>
-<p>The best way to set the motor current is by measuring the voltage on the Vref pin (0…2.5V) and adjusting the voltage with the potentiometer. The maximum settable motor current is 1.77A RMS (0.11Ohm sense resistors), but the SilentStepSticks can only be used up to 1.2A RMS.<br />
-Irms = (Vref * 1.77A) / 2.5V = Vref * 0.71<br />
-Vref = (Irms * 2.5V) / 1.77A = Irms * 1.41 = Imax <br />
-Vref -&gt; Voltage on Vref pin<br />
-Irms -&gt; RMS (Root Mean Square) current per phase (Irms = Imax / 1.41)<br />
-Imax -&gt; Maximum current per phase (Imax = Irms * 1.41)   </p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-</div>
-<p>​    1. Vref measures Gnd and the voltage at the middle of the potentiometer.<br />
-​    2. Do not connect the motor when measuring the voltage, otherwise it is easy to burn the driver.<br />
-​    3. Power should be connected when measuring voltage, do not just connect USB power supply.<br />
-​    4. <font color="red"><strong>Please pay special attention to directions!</strong></font></p>
-<h3 id="calculator">Calculator<a class="headerlink" href="#calculator" title="Permanent link">&para;</a></h3>
-<form name="data">
-RMS Current (A): <input type="text" name="i"  value="0.6" style="width:60px;" size="5">
-Reference Voltage (V): <input readonly type="text" name="v" value="" style="width:60px;" size="5">
-<input type="button" name="go" value="calculate" onclick="var i=document.forms['data'].i.value; i=i.replace(',','.'); var v=new Number(i); v=v*1.41; v=v.toFixed(2); document.forms['data'].v.value=v; return false;">
-</form>
-
-<h3 id="micro-stepping">Micro-stepping<a class="headerlink" href="#micro-stepping" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th align="center">MS2(-)</th>
-<th align="center">MS1(-)</th>
-<th align="center">Steps(-)</th>
-<th align="center">Interpolation(-)</th>
-<th align="center">Mode(-)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center">GND</td>
-<td align="center">VIO</td>
-<td align="center">1⁄2</td>
-<td align="center">1⁄256</td>
-<td align="center">stealthChop2</td>
-</tr>
-<tr>
-<td align="center">VIO</td>
-<td align="center">GND</td>
-<td align="center">1⁄4</td>
-<td align="center">1⁄256</td>
-<td align="center">stealthChop2</td>
-</tr>
-<tr>
-<td align="center">GND</td>
-<td align="center">GND</td>
-<td align="center">1⁄8</td>
-<td align="center">1⁄256</td>
-<td align="center">stealthChop2</td>
-</tr>
-<tr>
-<td align="center">VIO</td>
-<td align="center">VIO</td>
-<td align="center">1⁄16</td>
-<td align="center">1⁄256</td>
-<td align="center">stealthChop2</td>
-</tr>
-</tbody>
-</table>
-<h2 id="setting-method">Setting Method<a class="headerlink" href="#setting-method" title="Permanent link">&para;</a></h2>
-<hr />
-<p>With the TMC2208 Configurator you can change the settings and program the OTP (One-Time-Programmable) memory of a Trinamic TMC2208 via the UART interface.</p>
-<h3 id="to-run-the-program">To run the program:<a class="headerlink" href="#to-run-the-program" title="Permanent link">&para;</a></h3>
-<ol>
-<li>Install ScriptCommunicator</li>
-<li>Download TMC2208.scez</li>
-<li>Start the TMC2208.scez file with the ScriptCommunicator: ScriptCommunicator TMC2208.scez</li>
-<li>Choose the right serial port and click Connect</li>
-<li>Modifications in the Configurator are directly transmitted</li>
-</ol>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-</div>
-<p>​    The OTP bits can be programmed only one time.
-​    If you enable spreadCycle then TOFF cannot be 0 (null).</p>
-<h3 id="hardware-connection">Hardware Connection<a class="headerlink" href="#hardware-connection" title="Permanent link">&para;</a></h3>
-<p><img alt="TMC2208-hardware-connection" src="../images/TMC2208-hardware-connection.png" /></p>
-<p>You can use every RS232 serial adapter with 0-5V logic levels (e.g. FTDI-Breakout) and the SilentStepStick Tester/Programmer can be used as connection adapter.</p>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-</div>
-<p>​    The jumper next to the PDN_UART pin has to be closed on the TMC2208 SilentStepStick to enable the pin access via the pin header.</p>
-<h2 id="versions-difference">Versions Difference<a class="headerlink" href="#versions-difference" title="Permanent link">&para;</a></h2>
-<hr />
-<table>
-<thead>
-<tr>
-<th align="center">Versions</th>
-<th>difference</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center">V1.0</td>
-<td>The default is standalone mode，If you need UART mode，you must config by yourself.</td>
-</tr>
-<tr>
-<td align="center">V1.2</td>
-<td>UART mode,   it’s used for F6.</td>
-</tr>
-</tbody>
-</table>
+<p><img alt="5160接线" src="../images/5160接线.png" /></p>
+<h3 id="mode-selection">Mode selection<a class="headerlink" href="#mode-selection" title="Permanent link">&para;</a></h3>
+<p><img alt="5160模式选择" src="../images/5160模式选择.jpg" /></p>
+<p>​    The FYSETC S5160 V1.2 defaults to SPI mode. If you need to change to Standalone mode, you need to change the jumper as shown.</p>
+<h3 id="f6-jumper-for-tmc5160-spi-mode">F6 jumper for TMC5160 SPI mode<a class="headerlink" href="#f6-jumper-for-tmc5160-spi-mode" title="Permanent link">&para;</a></h3>
+<p><img alt="F6_5610" src="../images/F6_5610.png" /></p>
+<p>If you are using the TMC5160 SPI mode on the F6, you do not need extra wiring, just plug in the jumper cap on the F6 as shown. </p>
 <h2 id="shop">Shop<a class="headerlink" href="#shop" title="Permanent link">&para;</a></h2>
 <hr />
 <ul>
-<li><a href="https://www.aliexpress.com/store/product/4pcs-TMC2208-Stepping-Motor-Mute-Driver-Stepstick-Power-Tube-Built-in-Driver-Current-1-4A-Peak/3480083_32848573038.html">TMC2208</a></li>
+<li><a href="https://www.aliexpress.com/item/33011704134.html">TMC5160</a></li>
 </ul>
 <h2 id="tech-support">Tech Support<a class="headerlink" href="#tech-support" title="Permanent link">&para;</a></h2>
 <hr />
