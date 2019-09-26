@@ -13,7 +13,7 @@
         <meta name="description" content="fysetc product documentation">
       
       
-        <link rel="canonical" href="http://wiki.fysetc.com/TMC2209/">
+        <link rel="canonical" href="http://wiki.fysetc.com/S5161_V1.1/">
       
       
         <meta name="author" content="Tina">
@@ -42,7 +42,7 @@
     
     
       
-        <title>TMC2209 - FYSETC WIKI</title>
+        <title>Silent5160 - FYSETC WIKI</title>
       
     
     
@@ -130,7 +130,7 @@
                 FYSETC WIKI
               </span>
               <span class="md-header-nav__topic">
-                TMC2209
+                Silent5160
               </span>
             
           
@@ -401,10 +401,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
     
     <label class="md-nav__link" for="nav-4">
       Stepper Drivers
@@ -569,6 +571,120 @@
     <a href="../S5160_V1.2/" title="Silent5160" class="md-nav__link">
       Silent5160
     </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Silent5160
+      </label>
+    
+    <a href="./" title="Silent5160" class="md-nav__link md-nav__link--active">
+      Silent5160
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#product-introduction" title="Product Introduction" class="md-nav__link">
+    Product Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#features" title="Features" class="md-nav__link">
+    Features
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#technical-specifications" title="Technical Specifications" class="md-nav__link">
+    Technical Specifications
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pin-functions" title="Pin Functions" class="md-nav__link">
+    Pin Functions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interface-resources" title="Interface Resources" class="md-nav__link">
+    Interface Resources
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wiring-diagram" title=".Wiring Diagram" class="md-nav__link">
+    .Wiring Diagram
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mode-selection" title="Mode selection" class="md-nav__link">
+    Mode selection
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shop" title="Shop" class="md-nav__link">
+    Shop
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tech-support" title="Tech Support" class="md-nav__link">
+    Tech Support
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+        <li class="md-nav__item">
+          <a href="#__comments" title="Comments" class="md-nav__link md-nav__link--active">
+            Comments
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -1052,56 +1168,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#wiring-diagram" title="Wiring Diagram" class="md-nav__link">
-    Wiring Diagram
+  <a href="#wiring-diagram" title=".Wiring Diagram" class="md-nav__link">
+    .Wiring Diagram
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#motor-current-setting" title="Motor Current Setting" class="md-nav__link">
-    Motor Current Setting
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#calculator" title="Calculator" class="md-nav__link">
-    Calculator
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#micro-stepping" title="Micro-stepping" class="md-nav__link">
-    Micro-stepping
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#setting-method" title="Setting Method" class="md-nav__link">
-    Setting Method
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#to-run-the-program" title="To run the program:" class="md-nav__link">
-    To run the program:
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#hardware-connection" title="Hardware Connection" class="md-nav__link">
-    Hardware Connection
+  <a href="#mode-selection" title="Mode selection" class="md-nav__link">
+    Mode selection
   </a>
   
 </li>
@@ -1147,32 +1222,33 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/fysetc/blob/master/docs/TMC2209.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/fysetc/blob/master/docs/S5161_V1.1.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>TMC2209</h1>
+                  <h1>Silent5160</h1>
                 
                 <h2 id="product-introduction">Product Introduction<a class="headerlink" href="#product-introduction" title="Permanent link">&para;</a></h2>
 <hr />
-<p><img alt="TMC2209" src="../images/TMC2209.jpg" /></p>
-<p>The TMC2209 is an ultra-silent motor driver IC for two phase stepper motors. TMC2209 pinning is compatible to a number of legacy drivers as well as to the TMC2208. TRINAMICs sophisticated StealthChop2 chopper ensures noiseless operation,maximum efficiency and best motor torque. Its fast current regulation and optional combination with SpreadCycle allow highly dynamic motion while adding. StallGuard for sensorless homing. The integrated power MOSFETs handle motor currents up to 2A RMS with protection and diagnostic features for robust and reliable operation. A simple to use UART interface opens up tuning and control options. Store application tuning to OTP memory.Industries’ most advanced STEP/DIR stepper motor driver family upgrades designs to noiseless and most precise operation for cost-effective and highly competitive solutions.Step/Dir Drivers for Two-Phase Bipolar Stepper Motors up to 2.8A peak –StealthChop™ for Quiet Movement – UART Interface Option –Sensorless Stall Detection StallGuard4. </p>
+<p><img alt="TMC5161" src="../images/TMC5161.jpg" /></p>
+<p>The TMC5161 is a highly compact stepper motor controller and driver IC. Its power stage is optimized for lowest power dissipation and highest dynamics with Nema 17 and Nema 23 motors. It combines a flexible ramp generator for automatic target positioning with industries’ most advanced stepper motor driver. Based on TRINAMICs sophisticated SpreadCycle and StealthChop choppers, it ensures absolutely noiseless operation combined with maximum efficiency and best motor torque. High integration, high energy efficiency and a small form factor enable miniaturized and scalable systems for cost effective solutions. The complete solution reduces learning curve to a minimum while giving best performance in class. Interface compatible to TMC5160.</p>
 <h2 id="features">Features<a class="headerlink" href="#features" title="Permanent link">&para;</a></h2>
 <hr />
 <ul>
-<li>2-phase stepper motors up to 2.8A coil current (peak), 2A RMS </li>
-<li>STEP/DIR Interface with 8, 16, 32 or 64 microstep pin setting</li>
-<li>Smooth Running 256 microsteps by MicroPlyer™ interpolation </li>
-<li>StealthChop2™ silent motor operation </li>
-<li>SpreadCycle™ highly dynamic motor control chopper</li>
-<li>StallGuard4™ load and stall detection for StealthChop </li>
-<li>CoolStep™ current control for energy savings up to 75%</li>
-<li>Low RDSon, Low Heat-Up LS 170mΩ &amp; HS 170mΩ (typ. at 25°C) t</li>
-<li>Voltage Range 4.75… 29V DC </li>
-<li>Low Power Standby to fit standby energy regulations</li>
-<li>Internal Sense Resistor option (no sense resistors required) </li>
-<li>Passive Braking, Freewheeling, and automatic power down </li>
-<li>Single Wire UART &amp; OTP for advanced configuration options </li>
-<li>Integrated Pulse Generator for standalone motion </li>
+<li>2-phase stepper motors up to 3.5A RMS coil current</li>
+<li>Step/Dir Interface with 3D optimized interpolation MicroPlyer™</li>
+<li>Motion Controller with SixPoint™ramp as intelligent peripheral  </li>
+<li>Voltage Range 8 … 40V DC (55V peak) </li>
+<li>Low RDSon integrated 45mΩ MOSFETs </li>
+<li>SPI &amp; Single Wire UART </li>
+<li>Encoder Interface and 2x Ref.-Switch Input </li>
+<li>Highest Resolution 256 microsteps per full step </li>
+<li>StealthChop2™ for quiet operation and smooth motion </li>
+<li>Resonance Dampening for mid-range resonances </li>
+<li>SpreadCycle™ highly dynamic motor control chopper </li>
+<li>DcStep™ load dependent speed control </li>
+<li>StallGuard2™ high precision sensorless motor load detection </li>
+<li>CoolStep™ current control for energy savings up to 75% </li>
+<li>Passive Braking and freewheeling mode </li>
 <li>Full Protection &amp; Diagnostics </li>
 </ul>
 <h2 id="technical-specifications">Technical Specifications<a class="headerlink" href="#technical-specifications" title="Permanent link">&para;</a></h2>
@@ -1180,17 +1256,17 @@
 <thead>
 <tr>
 <th align="center">Model</th>
-<th align="center">TMC2208</th>
+<th align="center">TMC5161</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td align="center">Interface</td>
-<td align="center">Step/Dir</td>
+<td align="center">Step/Dir or SPI</td>
 </tr>
 <tr>
 <td align="center">Configuration</td>
-<td align="center">CFG Pins or UART</td>
+<td align="center">CFG Pins or SPI</td>
 </tr>
 <tr>
 <td align="center">Native Microsteps</td>
@@ -1206,11 +1282,11 @@
 </tr>
 <tr>
 <td align="center">Motor Voltage (VM)</td>
-<td align="center">5.5-28V</td>
+<td align="center">10 - 35V</td>
 </tr>
 <tr>
 <td align="center">Motor Phase Current  max</td>
-<td align="center">2A RMS, 2.8A Peak</td>
+<td align="center">3.5A</td>
 </tr>
 <tr>
 <td align="center">Internal V-  Regulator</td>
@@ -1218,7 +1294,7 @@
 </tr>
 <tr>
 <td align="center">RDSon</td>
-<td align="center">0.1 Ohm (HV 0.2 Ohm)</td>
+<td align="center">0.5Ohm</td>
 </tr>
 <tr>
 <td align="center">stealthChop (quiet)</td>
@@ -1244,7 +1320,7 @@
 </table>
 <h2 id="pin-functions">Pin Functions<a class="headerlink" href="#pin-functions" title="Permanent link">&para;</a></h2>
 <hr />
-<p><img alt="TMC2209引脚图" src="../images/TMC2209引脚图.jpg" /></p>
+<p><img alt="TMC5161-PIN" src="../images/TMC5161-PIN.png" /></p>
 <table>
 <thead>
 <tr>
@@ -1266,27 +1342,27 @@
 <td>Motor Supply Voltage</td>
 </tr>
 <tr>
-<td align="center">VIO</td>
-<td>Logic Supply Voltage</td>
+<td align="center">VCC-IO</td>
+<td>3.3V to 5V IO supply voltage for all digital pins.</td>
 </tr>
 <tr>
 <td align="center"></td>
 <td><strong>Motor Outputs</strong></td>
 </tr>
 <tr>
-<td align="center">M1A</td>
+<td align="center">B1</td>
 <td>Motor Coil 1</td>
 </tr>
 <tr>
-<td align="center">M1B</td>
+<td align="center">B2</td>
 <td>Motor Coil 1</td>
 </tr>
 <tr>
-<td align="center">M2A</td>
+<td align="center">A1</td>
 <td>Motor Coil 2</td>
 </tr>
 <tr>
-<td align="center">M2B</td>
+<td align="center">A2</td>
 <td>Motor Coil 2</td>
 </tr>
 <tr>
@@ -1294,147 +1370,81 @@
 <td><strong>Control Inputs</strong></td>
 </tr>
 <tr>
-<td align="center">STEP</td>
-<td>Step-Signal Input</td>
+<td align="center">REFL_STEP</td>
+<td>STEP input</td>
 </tr>
 <tr>
-<td align="center">DIR</td>
-<td>Direction-Signal Input</td>
+<td align="center">REFR_DIR</td>
+<td>DIR input</td>
 </tr>
 <tr>
 <td align="center"></td>
-<td><strong>TMC2209</strong></td>
+<td><strong>TMC5161</strong></td>
 </tr>
 <tr>
 <td align="center">EN</td>
 <td>Enable Motor Outputs: GND=on, VIO=off</td>
 </tr>
 <tr>
-<td align="center">MS1</td>
-<td>Step-Configuration</td>
+<td align="center">MOSI</td>
+<td>SPI data input</td>
 </tr>
 <tr>
-<td align="center">MS2</td>
-<td>Step-Configuration</td>
+<td align="center">SCK</td>
+<td>SPI serial clock input</td>
 </tr>
 <tr>
-<td align="center">TX</td>
-<td>UART  Transmit</td>
+<td align="center">CSN</td>
+<td>SPI chip select input (negative active)</td>
 </tr>
 <tr>
-<td align="center">RX</td>
-<td>UART  Receive</td>
+<td align="center">MISO</td>
+<td>SPI data output (tristate)</td>
 </tr>
 <tr>
-<td align="center">DIAG</td>
-<td>Diagnostics Output</td>
-</tr>
-<tr>
-<td align="center">INDEX</td>
-<td>Index Output</td>
-</tr>
-<tr>
-<td align="center">VREF</td>
-<td>Analog Reference Voltage</td>
+<td align="center">DIAG0</td>
+<td>Diagnostics output DIAG0.</td>
 </tr>
 </tbody>
 </table>
 <h2 id="interface-resources">Interface Resources<a class="headerlink" href="#interface-resources" title="Permanent link">&para;</a></h2>
 <hr />
-<h3 id="wiring-diagram">Wiring Diagram<a class="headerlink" href="#wiring-diagram" title="Permanent link">&para;</a></h3>
-<p><img alt="2209接线图" src="../images/2209接线图.png" /></p>
-<h3 id="motor-current-setting">Motor Current Setting<a class="headerlink" href="#motor-current-setting" title="Permanent link">&para;</a></h3>
-<p><img alt="2209测vref" src="../images/2209测vref.png" /></p>
-<p>The best way to set the motor current is by measuring the voltage on the Vref pin (0…2.5V) and adjusting the voltage with the potentiometer. The maximum settable motor current is 1.77A RMS (0.11Ohm sense resistors), but the SilentStepSticks can only be used up to 1.2A RMS.<br />
-Irms = (Vref * 1.77A) / 2.5V = Vref * 0.71<br />
-Vref = (Irms * 2.5V) / 1.77A = Irms * 1.41 = Imax <br />
-Vref -&gt; Voltage on Vref pin<br />
-Irms -&gt; RMS (Root Mean Square) current per phase (Irms = Imax / 1.41)<br />
-Imax -&gt; Maximum current per phase (Imax = Irms * 1.41)   </p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-</div>
-<p>​    1. Vref measures Gnd and the voltage at the middle of the potentiometer.<br />
-​    2. Do not connect the motor when measuring the voltage, otherwise it is easy to burn the driver.<br />
-​    3. Power should be connected when measuring voltage, do not just connect USB power supply.<br />
-​    4. <font color="red"><strong>Please pay special attention to directions!</strong></font></p>
-<h3 id="calculator">Calculator<a class="headerlink" href="#calculator" title="Permanent link">&para;</a></h3>
-<form name="data">
-RMS Current (A): <input type="text" name="i"  value="0.6" style="width:60px;" size="5">
-Reference Voltage (V): <input readonly type="text" name="v" value="" style="width:60px;" size="5">
-<input type="button" name="go" value="calculate" onclick="var i=document.forms['data'].i.value; i=i.replace(',','.'); var v=new Number(i); v=v*1.41; v=v.toFixed(2); document.forms['data'].v.value=v; return false;">
-</form>
-
-<h3 id="micro-stepping">Micro-stepping<a class="headerlink" href="#micro-stepping" title="Permanent link">&para;</a></h3>
+<h3 id="wiring-diagram">.Wiring Diagram<a class="headerlink" href="#wiring-diagram" title="Permanent link">&para;</a></h3>
+<p><img alt="5161接线" src="../images/5161接线.png" /></p>
+<h3 id="mode-selection">Mode selection<a class="headerlink" href="#mode-selection" title="Permanent link">&para;</a></h3>
+<p><img alt="5161跳线" src="../images/5161跳线.jpg" /></p>
 <table>
 <thead>
 <tr>
-<th align="center">MS2(-)</th>
-<th align="center">MS1(-)</th>
-<th align="center">Steps(-)</th>
-<th align="center">Interpolation(-)</th>
-<th align="center">Mode(-)</th>
+<th>PIN/MODE</th>
+<th>SPI Mode</th>
+<th>SPI Moed</th>
+<th>UART Mode</th>
+<th>Standalone Mode</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center">GND</td>
-<td align="center">VIO</td>
-<td align="center">1⁄2</td>
-<td align="center">1⁄256</td>
-<td align="center">stealthChop2</td>
+<td>SPI</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
 </tr>
 <tr>
-<td align="center">VIO</td>
-<td align="center">GND</td>
-<td align="center">1⁄4</td>
-<td align="center">1⁄256</td>
-<td align="center">stealthChop2</td>
-</tr>
-<tr>
-<td align="center">GND</td>
-<td align="center">GND</td>
-<td align="center">1⁄8</td>
-<td align="center">1⁄256</td>
-<td align="center">stealthChop2</td>
-</tr>
-<tr>
-<td align="center">VIO</td>
-<td align="center">VIO</td>
-<td align="center">1⁄16</td>
-<td align="center">1⁄256</td>
-<td align="center">stealthChop2</td>
+<td>SD</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
 </tr>
 </tbody>
 </table>
-<h2 id="setting-method">Setting Method<a class="headerlink" href="#setting-method" title="Permanent link">&para;</a></h2>
-<hr />
-<p>With the TMC2209 Configurator you can change the settings and program the OTP (One-Time-Programmable) memory of a Trinamic TMC2209 via the UART interface.</p>
-<h3 id="to-run-the-program">To run the program:<a class="headerlink" href="#to-run-the-program" title="Permanent link">&para;</a></h3>
-<ol>
-<li>Install ScriptCommunicator</li>
-<li>Download TMC2208.scez</li>
-<li>Start the TMC2208.scez file with the ScriptCommunicator: ScriptCommunicator TMC2208.scez</li>
-<li>Choose the right serial port and click Connect</li>
-<li>Modifications in the Configurator are directly transmitted</li>
-</ol>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-</div>
-<p>​    The OTP bits can be programmed only one time.
-​    If you enable spreadCycle then TOFF cannot be 0 (null).</p>
-<h3 id="hardware-connection">Hardware Connection<a class="headerlink" href="#hardware-connection" title="Permanent link">&para;</a></h3>
-<p><img alt="2209串口接线" src="../images/2209串口接线.jpg" /></p>
-<p>You can use every RS232 serial adapter with 0-5V logic levels (e.g. FTDI-Breakout) and the SilentStepStick Tester/Programmer can be used as connection adapter.</p>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>The FYSETC TMC2209V2.1 version has been set with jumpers, and the TX and RX pins are lengthened for easy wiring. You only need to follow the silk screen to wire and use.</p>
-</div>
-<hr />
+<p>The FYSETC S5160 V1.1 version now defaults to SPI mode (SD=1 and SPI=1). If you want to use another mode, you need to change the jumper yourself according to the instructions above.</p>
 <h2 id="shop">Shop<a class="headerlink" href="#shop" title="Permanent link">&para;</a></h2>
 <hr />
 <ul>
-<li><a href="https://www.aliexpress.com/item/33025556705.html">TMC2209</a></li>
+<li><a href="https://www.aliexpress.com/item/33052654667.html">TMC5161</a></li>
 </ul>
 <h2 id="tech-support">Tech Support<a class="headerlink" href="#tech-support" title="Permanent link">&para;</a></h2>
 <hr />
@@ -1451,9 +1461,9 @@ Reference Voltage (V): <input readonly type="text" name="v" value="" style="widt
   <div id="disqus_thread"></div>
   <script>
     var disqus_config = function () {
-      this.page.url = "http://wiki.fysetc.com/TMC2209/";
+      this.page.url = "http://wiki.fysetc.com/S5161_V1.1/";
       this.page.identifier =
-        "/TMC2209/";
+        "/S5161_V1.1/";
     };
     (function() {
       var d = document, s = d.createElement("script");
@@ -1471,6 +1481,41 @@ Reference Voltage (V): <input readonly type="text" name="v" value="" style="widt
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../S5160_V1.2/" title="Silent5160" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Silent5160
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../ST820_V1.0/" title="ST820 V1.0" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                ST820 V1.0
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
