@@ -302,6 +302,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../FYSETC_S6/" title="FYSETC S6" class="md-nav__link">
+      FYSETC S6
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../AIO_II/" title="FYSETC AIO II" class="md-nav__link">
       FYSETC AIO II
     </a>
@@ -745,7 +757,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Silent2209_V2.0/" title="Silent2209" class="md-nav__link">
+    <a href="../Silent2209_V2.0.md" title="Silent2209" class="md-nav__link">
       Silent2209
     </a>
   </li>
@@ -1392,7 +1404,7 @@
                 <h2 id="product-introduction">Product Introduction<a class="headerlink" href="#product-introduction" title="Permanent link">&para;</a></h2>
 <hr />
 <p><img alt="TMC2225" src="../images/TMC2225.png" /></p>
-<p>TMC2225 is Similar to TMC2208, it is an ultra-quiet two-phase stepper motor driver, continuous drive current 1.4A, peak current 2A, voltage range 4.75V-36V, 256 subdivision. The flexible microPlyer interpolation unit provides up to 256 subdivisions, allowing perfect sinusoidal control even in systems with limited pulse frequencies; these are also designed because stealthChop2 ultra-quiet technology is widely used in 3D printing. Compatible with existing 3D printer electronics, eliminating the expensive costs of redesign. With a standard step/dir interface, it is easy to use. It can replace the original TMC2100, lower heat, especially for 3D printing market.</p>
+<p>TMC2225 is Similar to TMC2208,with TSSOP-28 package, it is an ultra-quiet two-phase stepper motor driver, continuous drive current 1.4A, peak current 2A, voltage range 4.75V-36V, 256 subdivision. The flexible microPlyer interpolation unit provides up to 256 subdivisions, allowing perfect sinusoidal control even in systems with limited pulse frequencies;  Compatible with existing 3D printer electronics, eliminating the expensive costs of redesign. With a standard step/dir interface, it is easy to use. It can replace the original A4988, lower heat, especially for 3D printing market.</p>
 <h2 id="features">Features<a class="headerlink" href="#features" title="Permanent link">&para;</a></h2>
 <hr />
 <ul>
@@ -1440,11 +1452,11 @@
 </tr>
 <tr>
 <td align="center">Motor Voltage (VM)</td>
-<td align="center">5.5-36V</td>
+<td align="center">4.75-36V</td>
 </tr>
 <tr>
 <td align="center">Motor Phase Current  max</td>
-<td align="center">1.2A RMS, 2.0A Peak</td>
+<td align="center">1.4A RMS, 2.0A Peak</td>
 </tr>
 <tr>
 <td align="center">Internal V-  Regulator</td>
@@ -1452,7 +1464,7 @@
 </tr>
 <tr>
 <td align="center">RDSon</td>
-<td align="center">&lt;=0.3 Ohm</td>
+<td align="center">LS 280mΩ &amp; HS 290mΩ (typ. at 25°C)</td>
 </tr>
 <tr>
 <td align="center">stealthChop2 (quiet)</td>
@@ -1557,7 +1569,7 @@
 </tr>
 <tr>
 <td align="center">TX</td>
-<td>UART TX,   Connected to the PDN via a 1K resistor</td>
+<td>UART TX,   Connected to the PDN via a 1K resistor on board</td>
 </tr>
 <tr>
 <td align="center">DIAG</td>
@@ -1579,8 +1591,8 @@
 <p><img alt="TMC2225-wiring" src="../images/TMC2225_wiring.png" /></p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
+<p>The TMC2225 outputs continuous motor current up to 1.4A and peak current up to 2A. Therefore, the reference voltage of the driver module should not exceed 1V. At the same time, the driver module must be heat dissipated, otherwise it will affect the life of the driver module.</p>
 </div>
-<p>​    The TMC2225 outputs continuous motor current up to 1.4A and peak current up to 2A. Therefore, the reference voltage of the driver module should not exceed 1V. At the same time, the driver module must be dissipated, otherwise it will affect the life of the driver module.</p>
 <h3 id="motor-current-setting-same-as-tmc2208">Motor Current Setting  (Same As TMC2208)<a class="headerlink" href="#motor-current-setting-same-as-tmc2208" title="Permanent link">&para;</a></h3>
 <p><img alt="TMC2208-current-setting" src="../images/TMC2208-current-setting.png" /></p>
 <p>The best way to set the motor current is by measuring the voltage on the Vref pin (0…2.5V) and adjusting the voltage with the potentiometer. The maximum settable motor current is 1.77A RMS (0.11Ohm sense resistors), but the SilentStepSticks can only be used up to 1.2A RMS.<br />
