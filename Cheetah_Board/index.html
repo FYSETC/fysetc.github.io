@@ -1634,29 +1634,28 @@
 <h4 id="download-vscode-platformio">Download Vscode + platformio<a class="headerlink" href="#download-vscode-platformio" title="Permanent link">&para;</a></h4>
 <p>To compile the firmware , you need to install Visual Studio Code and the platformio pulg-in.</p>
 <h4 id="download-firmware">Download firmware<a class="headerlink" href="#download-firmware" title="Permanent link">&para;</a></h4>
-<p>You can download the firmware from <a href="https://github.com/FYSETC/Marlin-2.0.x-FYSETC">https://github.com/FYSETC/Marlin-2.0.x-FYSETC</a> , and if you want to know what we have changed , we recommend to use git to get the code .</p>
+<p>You can download the firmware from <a href="https://github.com/FYSETC/Marlin-2.0.x-FYSETC">https://github.com/FYSETC/Marlin-2.0.x-FYSETC</a>, </p>
+<p>Cheetah V11 : <a href="https://github.com/FYSETC/Marlin-2.0.x-FYSETC/tree/CHEETAH/V11/Marlin">https://github.com/FYSETC/Marlin-2.0.x-FYSETC/tree/CHEETAH/V11/Marlin</a></p>
+<p>Cheetah V12 : <a href="https://github.com/FYSETC/Marlin-2.0.x-FYSETC/tree/CHEETAH/V12/Marlin">https://github.com/FYSETC/Marlin-2.0.x-FYSETC/tree/CHEETAH/V12/Marlin</a> </p>
+<p>And if you want to know what we have changed , we recommend to use git to get the code .</p>
 <h4 id="compile-the-firmware">Compile the firmware<a class="headerlink" href="#compile-the-firmware" title="Permanent link">&para;</a></h4>
 <p>Open Vscode and open platformio main page and click the "Open Project" button , and direct to the folder where you put your firmware.</p>
 <p><img alt="1561099422559" src="../images/1561099422559.png" /></p>
 <p>If everything goes fine , at the bottom you can see several buttons</p>
 <p><img alt="1561099546202" src="../images/1561099546202.png" /></p>
-<p>The check mark is for compiling .</p>
-<p>Open platformio.ini file and change the option default_envs as below.</p>
-<p>default_envs = fysetc_STM32F1</p>
-<p>And then replace the default configuration.h and configuration_adv.h with files locate in FIRMWARE_LOCATE\Marlin\Marlin\config\examples\FYSETC according to your board.</p>
-<p>Then click check mark to compile.</p>
+<p>Just click check mark to compile.</p>
 <p>If you generate the hex file fail you may need to open vscode using Administrator Account .</p>
 <h4 id="upload-the-firmwarewindowslinuxmac">Upload the firmware(windows,linux,Mac)<a class="headerlink" href="#upload-the-firmwarewindowslinuxmac" title="Permanent link">&para;</a></h4>
 <p>We provide several ways to upload the firmware .You can just click the upload button to upload the firmware or refer to the two methods below.</p>
 <h4 id="upload-the-firmwarewindows">Upload the firmware(windows)<a class="headerlink" href="#upload-the-firmwarewindows" title="Permanent link">&para;</a></h4>
-<p>After compiling , you should see the firmware file "firmware.hex" in the folder FIRMWARE_LOCATE\Marlin\Marlin\.pioenvs\fysetc_STM32F1\</p>
+<p>After compiling , you should see the firmware file "firmware.hex" in the folder FIRMWARE_LOCATE\Marlin\Marlin\.pio\build\STM32F103RC_fysetc\</p>
 <p>Download the flash software in our github <a href="https://github.com/FYSETC/STM32Flasher">https://github.com/FYSETC/STM32Flasher</a></p>
 <p>Connect the board and your pc with USB cable (This step should before you open the software)</p>
 <p>Double the click "FlyMcu.exe" software to open it.</p>
 <p><img alt="1561100540118" src="../images/1561100540118.png" /></p>
 <p>Select "Reset@DTR low(&lt;-3v),ISP @RTS High"</p>
 <p>Click "Port" to select the port of your USB </p>
-<p>Select FIRMWARE_LOCATE\Marlin\Marlin\.pioenvs\fysetc_STM32F1\firmware.hex as the screenshot shows.</p>
+<p>Select FIRMWARE_LOCATE\Marlin\Marlin\.pio\build\STM32F103RC_fysetc\firmware.hex.</p>
 <p>At last , "Start ISP(p)" to upload the firmware.</p>
 <h4 id="upload-the-firmwarelinux">Upload the firmware(linux)<a class="headerlink" href="#upload-the-firmwarelinux" title="Permanent link">&para;</a></h4>
 <h5 id="load-usb-driver">Load usb driver<a class="headerlink" href="#load-usb-driver" title="Permanent link">&para;</a></h5>
